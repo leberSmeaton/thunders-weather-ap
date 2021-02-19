@@ -59,6 +59,15 @@ function showTemperature(response) {
   let currentTemp = document.querySelector(".temperature");
   currentTemp.innerHTML = temperature;
 
+    if (temperature <= 18) {
+      document.getElementById("funWeatherDescription").innerHTML = "Brrr... It's chilly, better chuck on another layer.";
+      document.getElementById("weatherIllustration").innerHTML = "";
+    } else if (temperature >= 26) {
+      document.getElementById("funWeatherDescription").innerHTML = "It's a hot one. Slip, Slip, Slap and Drink more water.";
+    } else {
+      document.getElementById("funWeatherDescription").innerHTML = "Would you LOOK at that! Perfect temperature, enjoy your day!";
+    }
+
   let cityName = response.data.name;
   let currentCityName = document.querySelector(".currentLocation");
   currentCityName.innerHTML = cityName;
