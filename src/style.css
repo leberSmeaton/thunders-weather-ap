@@ -55,6 +55,16 @@ a:hover {
   background-color: #ffffff;
 }
 
+.btnGeo {
+  border: none;
+  border-radius: 5px;
+  background: none;
+}
+
+.btnGeo:hover {
+  background-color: #ffffff;
+}
+
 .header {
   padding-bottom: 20px;
   text-align: left;
