@@ -125,3 +125,7 @@ a:hover {
   color: #444;
   font-size: 38px;
 }
+
+p a:hover {
+  color: #ffc1b6;
+}

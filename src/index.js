@@ -61,7 +61,7 @@ function showTemperature(response) {
 
     if (temperature <= 18) {
       document.getElementById("funWeatherDescription").innerHTML = "Brrr... It's chilly, better chuck on another layer.";
-      document.getElementById("weatherIllustration").innerHTML = "";
+      document.getElementById("currentTempWeatherIcon").innerHTML = "<i class=\"fas fa-cloud\"></i>";
     } else if (temperature >= 26) {
       document.getElementById("funWeatherDescription").innerHTML = "It's a hot one. Slip, Slip, Slap and Drink more water.";
     } else {
