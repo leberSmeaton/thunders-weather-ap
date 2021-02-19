@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forecast</title>
+
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!--Font Awesome Icons-->
+    <script src="https://kit.fontawesome.com/7483e96227.js" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="style.css"/>
+
+</head>
+
+<body>
+<!-- mainImage cropped in CSS-->
+<img src="undraw_Beach_rvmg.svg" class="mainImage cropped1" alt="couple at the beach">
+
+
+<div class="outsideContainer">
+  <div class="container">
+
+
+    <!--TO ADD-->
+
+    <!--Add Current Location Button Icon-->
+    <!--<i class="fas fa-map-marker-alt"></i>
+    <i class="fas fa-search"></i>-->
+
+    <!--Need to add C & F button change-->
+
+
+    <!--Search Bar-->
+    <div class="row header">
+      <div class="col-sm-12">
+
+        <form id="search-form">
+          <div class="input-group mb-3">
+            <input type="search" class="form-control" placeholder="Search new city" aria-label="Username"
+              aria-describedby="basic-addon1" id="search-text-input" />
+            <div class="input-group-prepend">
+              <button class="btn btn-outline-secondary" type="submit" id="button-addon1">🔍</button>
+            </div>
+          </div>
+        </form>
+        <h4>
+          <button class="btnGeo" type="submit" id="geoLocation">📍</button>
+          <strong id="currentLocation" class="currentLocation">Melbourne</strong> | <span id="dateTime"></span>
+        </h4>
+      </div>
+    </div>
+
+    <!--empty section-->
+    <div class="row">
+      <div class="col-6">
+      </div>
+
+      <!--Temperature Card-->
+      <div class="col-6">
+        <div class="card">
+          <div class="card-body">
+            <h1 class="card-title currentTemp">
+              <i class="fas fa-cloud-sun"></i>
+              <span class="temperature" id="temperature"> 38.7 </span>
+              <span class="units">
+                <a href="#" id="celcius-link">°C</a> |
+                <a href="#" id="fahrenheit-link">°F</a>
+              </span>
+            </h1>
+            <p class="card-text">
+              Feels like <strong id="feelsLike">32.4</strong>°
+              <br />
+              <br />
+              <strong id="tempMax">41</strong>° Max | <span id="tempMin">17</span>° Overnight Min
+              <br />
+              <br />
+              <strong id="windSpeed">20</strong>km/h Wind
+              <br />
+              <strong id="tempHumidity">95</strong>% Humidity
+              <br />
+              <strong id="description">Sunny</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--end row-->
+
+    <br />
+    <br />
+
+    <div class="row">
+      <div class="col-12 description">
+        <h1>
+          Very hot. Afternoon cool change. Drink more water.
+        </h1>
+      </div>
+    </div>
+    <!--end row-->
+
+    <br />
+
+    <div class="row">
+      <div class="col-12 dailyForecast">
+        <h4>
+          Daily Forecast
+        </h4>
+      </div>
+    </div>
+    <!--end row-->
+
+    <div class="row">
+      <div class="card-group">
+        <div class="col-sm-2">
+          <div class="card text-center">
+            <h5 class="card-title daysOfWeek">
+              Tomorrow
+            </h5>
+            <i class="fas fa-sun"></i>
+            <div class="card-body">
+              <p class="card-text">
+                17° | <strong>22°</strong>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-2">
+          <div class="card text-center">
+            <h5 class="card-title daysOfWeek">Wednesday</h5>
+            <i class="fas fa-sun"></i>
+            <div class="card-body">
+              <p class="card-text">12° | <strong>24°</strong>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-2">
+          <div class="card text-center">
+            <h5 class="card-title daysOfWeek">Thursday</h5>
+            <i class="fas fa-sun"></i>
+            <div class="card-body">
+              <p class="card-text">14° | <strong>29°</strong>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-2">
+          <div class="card text-center">
+            <h5 class="card-title daysOfWeek">Friday</h5>
+            <i class="fas fa-sun"></i>
+            <div class="card-body">
+              <p class="card-text">15° | <strong>29°</strong>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-2">
+          <div class="card text-center">
+            <h5 class="card-title daysOfWeek">Saturday</h5>
+            <i class="fas fa-sun"></i>
+            <div class="card-body">
+              <p class="card-text">17° | <strong>26°</strong>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-2">
+          <div class="card text-center">
+            <h5 class="card-title daysOfWeek">Sunday</h5>
+            <i class="fas fa-sun"></i>
+            <div class="card-body">
+              <p class="card-text">15° | <strong>26°</strong>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--end row-->
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <div class="row footer">
+      <div class="col-12">
+        <p>
+          Coded by Bella Leber Smeaton.
+        </p>
+      </div>
+    </div>
+
+  </div>
+  <!--not sure what this closes yet-->
+</div>
+<!--container div-->
+</div>
+<!--outsideContainer-->
+
+
+<script src="index.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+<!--
+<div class="float-left">
+  <span class="temperature" id="temperature">
+    19
+  </span>
+  <span class="units">
+    <a href="#" id="celcius-link">C</a>
+    <a href="#" id="fahrenheit-link">F</a>
+  </span>
+</div>
+-->

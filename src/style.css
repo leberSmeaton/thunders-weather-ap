@@ -1,0 +1,117 @@
+/* color palette: #ffc1b6, #ffdcb8, #ffeebb, #ffffff */
+
+body {
+  background-image: linear-gradient(
+    to bottom,
+    #ffc1b6,
+    #ffdcb8,
+    #ffeebb,
+    #ffffff
+  );
+  font-family: "Crimson Text", serif;
+  color: #444;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 700;
+  text-align: left;
+}
+
+p,
+h6,
+input {
+  font-weight: 400;
+  font-size: medium;
+}
+
+input {
+  max-width: 400px;
+}
+
+input[type="search"] {
+  border: 1px solid grey;
+  background: none;
+  color: #444;
+}
+
+a {
+  text-decoration: none;
+  color: #444;
+}
+
+a:hover {
+  color: #ffeebb;
+}
+
+.units {
+  font-size: 12px;
+}
+
+.btn:hover {
+  background-color: #ffffff;
+}
+
+.header {
+  padding-bottom: 20px;
+  text-align: left;
+}
+
+/* mainImage cropped */
+.mainImage {
+  position: absolute;
+  width: 765px; /* width of container */
+  height: 600px; /* height of container */
+  object-fit: cover;
+  object-position: 10px -40px;
+  z-index: 1;
+}
+
+.currentTemp {
+  font-size: xx-large;
+  justify-content: left;
+  text-align: left;
+}
+
+.outsideContainer {
+  padding-top: 10px;
+  position: relative;
+  z-index: 2;
+}
+
+.card {
+  background: none;
+  border: none;
+  padding: 5px;
+  min-width: 80px;
+}
+
+.daysOfWeek {
+  text-align: center;
+  font-size: medium;
+  white-space: nowrap;
+}
+
+.card-text {
+  line-height: 20px;
+}
+
+.col-sm-2 {
+  font-size: small;
+}
+
+.fa-sun {
+  color: #444;
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fa-cloud-sun {
+  color: #444;
+  font-size: 38px;
+}
