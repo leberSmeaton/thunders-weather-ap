@@ -21,8 +21,13 @@ h4 {
   text-align: left;
 }
 
-h1 {
-  margin: 40px 0 5px 0;
+h1.card-title {
+  margin: 20px 0 5px 0;
+  line-height: 1;
+}
+
+h1#funWeatherDescription {
+  margin: 70px 0 5px 0;
   line-height: 1;
 }
 
@@ -64,7 +69,7 @@ a {
 }
 
 a:hover {
-  color: #ffeebb;
+  color: #ffc1b6;
 }
 
 /* WeatherApp Container */
@@ -109,7 +114,6 @@ a:hover {
 .card {
   background: none;
   border: none;
-  /*min-width: 80px; is this necessary?*/
 }
 
 .card-body {
@@ -118,6 +122,8 @@ a:hover {
 }
 
 .units {
+  position: relative;
+  top: -12px;
   font-size: 12px;
 }
 
@@ -141,8 +147,4 @@ a:hover {
 .fa-rainbow {
   color: #444;
   font-size: 38px;
-}
-
-p a:hover {
-  color: #ffc1b6;
 }
