@@ -24,23 +24,12 @@
 </head>
 
 <body>
-<!-- mainImage cropped in CSS-->
-<img src="images/undraw_Beach_rvmg.svg" class="mainImage cropped1" alt="couple at the beach">
 
+<div class="weather-app">
+  <!-- mainImage cropped in CSS-->
+  <img src="images/undraw_Beach_rvmg.svg" class="mainImage cropped1" alt="couple at the beach">
 
-<div class="outsideContainer">
   <div class="container">
-
-
-    <!--TO ADD-->
-
-    <!--Add Current Location Button Icon-->
-    <!--<i class="fas fa-map-marker-alt"></i>
-    <i class="fas fa-search"></i>-->
-
-    <!--Need to add C & F button change-->
-
-
     <!--Search Bar-->
     <div class="row header">
       <div class="col-sm-12">
@@ -63,14 +52,14 @@
 
     <!--empty section-->
     <div class="row">
-      <div class="col-6">
+      <div class="col-7">
       </div>
 
       <!--Temperature Card-->
-      <div class="col-6">
+      <div class="col-5">
         <div class="card">
           <div class="card-body">
-            <h1 class="card-title currentTemp">
+            <h1 class="card-title">
               <span id="currentTempWeatherIcon"><i class="fas fa-cloud-sun"></i></span>
               <span class="temperature" id="temperature"> 38.7 </span>
               <span class="units">
@@ -78,6 +67,7 @@
                 <a href="#" id="fahrenheit-link">°F</a>
               </span>
             </h1>
+            
             <p class="card-text">
               Feels like <strong id="feelsLike">32.4</strong>°
               <br />
@@ -93,24 +83,21 @@
             </p>
           </div>
         </div>
-      </div>
+      </div><!--end temperature card-->
     </div>
     <!--end row-->
 
-    <br />
-    <br />
-
+    <!--Fun Description-->
     <div class="row">
       <div class="col-12 description">
         <h1 id="funWeatherDescription">
-          Very hot. Afternoon cool change. Drink more water.
+          Very hot! Afternoon cool change. Drink more water.
         </h1>
       </div>
     </div>
     <!--end row-->
 
-    <br />
-
+    <!--Daily Forecast-->
     <div class="row">
       <div class="col-12 dailyForecast">
         <h4>
@@ -120,6 +107,7 @@
     </div>
     <!--end row-->
 
+    <!--Forecast-->
     <div class="row">
       <div class="card-group">
         <div class="col-sm-2">
@@ -193,28 +181,29 @@
       </div>
     </div>
     <!--end row-->
-
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-
-    <div class="row footer">
-      <div class="col-12">
-        <p>
-          Coded by <a href="https://www.linkedin.com/in/bella-leber-smeaton/">Bella Leber Smeaton</a> | Hosted by <a href="https://www.netlify.com/">Netlify</a> | <a href="https://github.com/leberSmeaton/thunders-weather-ap">Open-source code</a> | <a href="mailto:leber.smeaton@yahoo.com"> Contact Me </a>
-        </p>
-      </div>
-    </div>
-
   </div>
-  <!--not sure what this closes yet-->
+  <!--container div-->
 </div>
-<!--container div-->
+<!--weather-app-->
+
+<div class="footer">
+  <p>
+    Coded by 
+    <a href="https://www.linkedin.com/in/bella-leber-smeaton/" target="blank">
+      Bella Leber Smeaton
+    </a> | Hosted by <a
+      href="https://www.netlify.com/" target="blank">
+      Netlify
+    </a> | <a
+      href="https://github.com/leberSmeaton/thunders-weather-ap" target="blank">
+      Open-source code
+    </a> | <a
+      href="mailto:leber.smeaton@yahoo.com" target="blank">
+        Contact + Feedback 
+    </a>
+  </p>
 </div>
-<!--outsideContainer-->
+<!--end footer-->
 
 
 <script src="src/index.js"></script>
