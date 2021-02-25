@@ -121,6 +121,14 @@ a:hover {
   line-height: 1;
 }
 
+.icon {
+  position: relative;
+  width: 55px; /* width of container */
+  height: 70px; /* height of container */
+  object-fit: cover;
+  object-position: -7px -5px;
+}
+
 .units {
   position: relative;
   top: -12px;

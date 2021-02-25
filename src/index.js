@@ -61,13 +61,13 @@ function showTemperature(response) {
 
     if (temperature <= 18) {
       document.getElementById("funWeatherDescription").innerHTML = "Brrr... It's chilly, better chuck on another layer.";
-      document.getElementById("currentTempWeatherIcon").innerHTML = "<i class=\"fas fa-cloud\"></i>";
+      /*document.getElementById("currentTempWeatherIcon").innerHTML = "<i class=\"fas fa-cloud\"></i>";*/
     } else if (temperature >= 26) {
       document.getElementById("funWeatherDescription").innerHTML = "It's a hot one. Slip, Slip, Slap and Drink more water.";
-      document.getElementById("currentTempWeatherIcon").innerHTML = "<i class=\"fas fa-sun\"></i>";
+      /*document.getElementById("currentTempWeatherIcon").innerHTML = "<i class=\"fas fa-sun\"></i>";*/
     } else {
       document.getElementById("funWeatherDescription").innerHTML = "Would you LOOK at that! Perfect temperature, enjoy your day!";
-      document.getElementById("currentTempWeatherIcon").innerHTML = "<i class=\"fas fa-rainbow\"></i>";
+      /*document.getElementById("currentTempWeatherIcon").innerHTML = "<i class=\"fas fa-rainbow\"></i>";*/
     }
 
   let cityName = response.data.name;
@@ -98,12 +98,15 @@ function showTemperature(response) {
   let currentDescription = document.querySelector("#description");
   currentDescription.innerHTML = description;
 
-  /*let dateElement = document.querySelector("#lastUpdatedDate");
-  dateElement.innerHTML = formatDate(response.data.dt * 1000);
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute("src",`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+
+  /*let dateElement = document.querySelector("#dateTime");
+  dateElement.innerHTML = formatDate(response.data.dt * 1000);*/
 
   let dateElement = formatDate(response.data.dt * 1000);
-  let currentDateElement = document.querySelector("#lastUpdatedDate");
-  currentDateElement.innerHTML = dateElement; */
+  let currentDateElement = document.querySelector("#dateTime");
+  currentDateElement.innerHTML = dateElement; 
 }
 // API City Search END
 
