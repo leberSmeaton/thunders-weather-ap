@@ -24,174 +24,175 @@
 </head>
 
 <body>
+  <div class="weather-app">
+    <!-- mainImage cropped in CSS-->
+    <img src="images/undraw_Beach_rvmg.svg" class="mainImage cropped" alt="couple at the beach">
+    
+    <div class="container">
 
-<div class="weather-app">
-  <!-- mainImage cropped in CSS-->
-  <img src="images/undraw_Beach_rvmg.svg" class="mainImage cropped" alt="couple at the beach">
+      <!--Search Bar-->
+      <div class="row header">
+        <div class="col-sm-12">
 
-  <div class="container">
-    <!--Search Bar-->
-    <div class="row header">
-      <div class="col-sm-12">
-
-        <form id="search-form">
-          <div class="input-group mb-3">
-            <input type="search" class="form-control" placeholder="Search new city" aria-label="Username"
-              aria-describedby="basic-addon1" id="search-text-input" />
-            <div class="input-group-prepend">
-              <button class="btn btn-outline-secondary" type="submit" id="button-addon1">🔍</button>
+          <form id="search-form">
+            <div class="input-group mb-3">
+              <input type="search" class="form-control" placeholder="Search new city" aria-label="Username"
+                aria-describedby="basic-addon1" id="search-text-input" />
+              <div class="input-group-prepend">
+                <button class="btn btn-outline-secondary" type="submit" id="button-addon1">🔍</button>
+              </div>
             </div>
-          </div>
-        </form>
-        <h4>
-          <button class="btnGeo" type="submit" id="geoLocation">📍</button>
-          <strong id="currentLocation" class="currentLocation">Melbourne</strong> |  <span id="dateTime"></span>
-        </h4>
-      </div>
-    </div>
-
-    <!--empty section-->
-    <div class="row">
-      <div class="col-7">
-      </div>
-
-      <!--Temperature Card-->
-      <div class="col-5">
-        <div class="card">
-          <div class="card-body">
-            <h1 class="card-title">
-              <span id="currentTempWeatherIcon">
-                <img
-                src= "https://openweathermap.org/img/wn/01d@2x.png"
-                alt="Clear"
-                id="icon"
-                class="icon"
-                />
-              </span>
-              <span class="temperature" id="temperature"> 38 </span>
-              <span class="units">
-                <a href="#" id="celcius-link" class="active">°C</a> |
-                <a href="#" id="fahrenheit-link">°F</a>
-              </span>
-            </h1>
-            
-            <p class="card-text">
-              Feels like <strong id="feelsLike">32</strong>°
-              <br />
-              <br />
-              <strong id="tempMax">41</strong>° Max | <span id="tempMin">17</span>° Overnight Min
-              <br />
-              <br />
-              <strong id="windSpeed">20</strong>km/h Wind
-              <br />
-              <strong id="tempHumidity">95</strong>% Humidity
-              <br />
-              <strong id="description">Sunny</strong>
-            </p>
-          </div>
+          </form>
+          <h4>
+            <button class="btnGeo" type="submit" id="geoLocation">📍</button>
+            <strong id="currentLocation" class="currentLocation">Melbourne</strong> |  <span id="dateTime"></span>
+          </h4>
         </div>
-      </div><!--end temperature card-->
-    </div>
-    <!--end row-->
-
-    <!--Fun Description-->
-    <div class="row">
-      <div class="col-12 description">
-        <h1 id="funWeatherDescription">
-          Very hot! Afternoon cool change. Drink more water.
-        </h1>
       </div>
-    </div>
-    <!--end row-->
 
-    <!--Daily Forecast-->
-    <div class="row">
-      <div class="col-12 dailyForecast">
-        <h4>
-          Daily Forecast
-        </h4>
-      </div>
-    </div>
-    <!--end row-->
+      <!--empty section-->
+      <div class="row">
+        <div class="col-7">
+        </div>
 
-    <!--Forecast-->
-    <div class="row">
-      <div class="card-group">
-        <div class="col-sm-2">
-          <div class="card text-center">
-            <h5 class="card-title daysOfWeek">
-              Tomorrow
-            </h5>
-            <i class="fas fa-sun"></i>
+        <!--Temperature Card-->
+        <div class="col-5">
+          <div class="card">
             <div class="card-body">
+              <h1 class="card-title">
+                <span id="currentTempWeatherIcon">
+                  <img
+                  src= "https://openweathermap.org/img/wn/01d@2x.png"
+                  alt="Clear"
+                  id="icon"
+                  class="icon"
+                  />
+                </span>
+                <span class="temperature" id="temperature"> 38 </span>
+                <span class="units">
+                  <a href="#" id="celcius-link" class="active">°C</a> |
+                  <a href="#" id="fahrenheit-link">°F</a>
+                </span>
+              </h1>
+              
               <p class="card-text">
-                17° | <strong>22°</strong>
+                Feels like <strong id="feelsLike">32</strong>°
+                <br />
+                <br />
+                <strong id="tempMax">41</strong>° Max | <span id="tempMin">17</span>° Overnight Min
+                <br />
+                <br />
+                <strong id="windSpeed">20</strong>km/h Wind
+                <br />
+                <strong id="tempHumidity">95</strong>% Humidity
+                <br />
+                <strong id="description">Sunny</strong>
               </p>
             </div>
           </div>
-        </div>
+        </div><!--end temperature card-->
+      </div>
+      <!--end row-->
 
-        <div class="col-sm-2">
-          <div class="card text-center">
-            <h5 class="card-title daysOfWeek">Wednesday</h5>
-            <i class="fas fa-sun"></i>
-            <div class="card-body">
-              <p class="card-text">12° | <strong>24°</strong>
-              </p>
+      <!--Fun Description-->
+      <div class="row">
+        <div class="col-12 description">
+          <h1 id="funWeatherDescription">
+            Very hot! Afternoon cool change. Drink more water.
+          </h1>
+        </div>
+      </div>
+      <!--end row-->
+
+      <!--Daily Forecast-->
+      <div class="row">
+        <div class="col-12 dailyForecast">
+          <h4>
+            Daily Forecast
+          </h4>
+        </div>
+      </div>
+      <!--end row-->
+
+      <!--Forecast-->
+      <div class="row">
+        <div class="card-group">
+          <div class="col-sm-2">
+            <div class="card text-center">
+              <h5 class="card-title daysOfWeek">
+                Tomorrow
+              </h5>
+              <i class="fas fa-sun"></i>
+              <div class="card-body">
+                <p class="card-text">
+                  17° | <strong>22°</strong>
+                </p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="col-sm-2">
-          <div class="card text-center">
-            <h5 class="card-title daysOfWeek">Thursday</h5>
-            <i class="fas fa-sun"></i>
-            <div class="card-body">
-              <p class="card-text">14° | <strong>29°</strong>
-              </p>
+          <div class="col-sm-2">
+            <div class="card text-center">
+              <h5 class="card-title daysOfWeek">Wednesday</h5>
+              <i class="fas fa-sun"></i>
+              <div class="card-body">
+                <p class="card-text">12° | <strong>24°</strong>
+                </p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="col-sm-2">
-          <div class="card text-center">
-            <h5 class="card-title daysOfWeek">Friday</h5>
-            <i class="fas fa-sun"></i>
-            <div class="card-body">
-              <p class="card-text">15° | <strong>29°</strong>
-              </p>
+          <div class="col-sm-2">
+            <div class="card text-center">
+              <h5 class="card-title daysOfWeek">Thursday</h5>
+              <i class="fas fa-sun"></i>
+              <div class="card-body">
+                <p class="card-text">14° | <strong>29°</strong>
+                </p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="col-sm-2">
-          <div class="card text-center">
-            <h5 class="card-title daysOfWeek">Saturday</h5>
-            <i class="fas fa-sun"></i>
-            <div class="card-body">
-              <p class="card-text">17° | <strong>26°</strong>
-              </p>
+          <div class="col-sm-2">
+            <div class="card text-center">
+              <h5 class="card-title daysOfWeek">Friday</h5>
+              <i class="fas fa-sun"></i>
+              <div class="card-body">
+                <p class="card-text">15° | <strong>29°</strong>
+                </p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="col-sm-2">
-          <div class="card text-center">
-            <h5 class="card-title daysOfWeek">Sunday</h5>
-            <i class="fas fa-sun"></i>
-            <div class="card-body">
-              <p class="card-text">15° | <strong>26°</strong>
-              </p>
+          <div class="col-sm-2">
+            <div class="card text-center">
+              <h5 class="card-title daysOfWeek">Saturday</h5>
+              <i class="fas fa-sun"></i>
+              <div class="card-body">
+                <p class="card-text">17° | <strong>26°</strong>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-2">
+            <div class="card text-center">
+              <h5 class="card-title daysOfWeek">Sunday</h5>
+              <i class="fas fa-sun"></i>
+              <div class="card-body">
+                <p class="card-text">15° | <strong>26°</strong>
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
+      <!--end row-->
     </div>
-    <!--end row-->
+    <!--container div-->
   </div>
-  <!--container div-->
-</div>
-<!--weather-app-->
+  <!--weather-app-->
+
 
 <div class="footer">
   <p>
