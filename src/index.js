@@ -38,7 +38,6 @@ console.log(formatDate(now));
 
 // search engine
 function searchCity(event) {
-  // why event here?
   event.preventDefault();
   let units = "metric";
   let apiKey = "31856a05b9b062fb137620991f56055f";
@@ -55,19 +54,18 @@ form.addEventListener("submit", searchCity);
 function showTemperature(response) {
   console.log(response.data);
 
-  let temperature = Math.round(response.data.main.temp);
+  celciusTemperature = response.data.main.temp;
+
+  let temperature = Math.round(celciusTemperature);
   let currentTemp = document.querySelector(".temperature");
   currentTemp.innerHTML = temperature;
 
     if (temperature <= 18) {
       document.getElementById("funWeatherDescription").innerHTML = "Brrr... It's chilly, better chuck on another layer.";
-      /*document.getElementById("currentTempWeatherIcon").innerHTML = "<i class=\"fas fa-cloud\"></i>";*/
     } else if (temperature >= 26) {
       document.getElementById("funWeatherDescription").innerHTML = "It's a hot one. Slip, Slip, Slap and Drink more water.";
-      /*document.getElementById("currentTempWeatherIcon").innerHTML = "<i class=\"fas fa-sun\"></i>";*/
     } else {
       document.getElementById("funWeatherDescription").innerHTML = "Would you LOOK at that! Perfect temperature, enjoy your day!";
-      /*document.getElementById("currentTempWeatherIcon").innerHTML = "<i class=\"fas fa-rainbow\"></i>";*/
     }
 
   let cityName = response.data.name;
@@ -100,13 +98,7 @@ function showTemperature(response) {
 
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute("src",`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
-
-  /*let dateElement = document.querySelector("#dateTime");
-  dateElement.innerHTML = formatDate(response.data.dt * 1000);*/
-
-  let dateElement = formatDate(response.data.dt * 1000);
-  let currentDateElement = document.querySelector("#dateTime");
-  currentDateElement.innerHTML = dateElement; 
+  
 }
 // API City Search END
 
@@ -137,6 +129,30 @@ geoLocationButton.addEventListener("click", getPosition);
 
 function convertFDegree(event) {
   event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  let fahrenheitTemperature = ((celciusTemperature * 9) / 5 + 32);
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+let fTemp = document.querySelector("#fahrenheit-link");
+fTemp.addEventListener("click", convertFDegree);
+
+function convertCDegree(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celciusTemperature);
+}
+
+let cTemp = document.querySelector("#celcius-link");
+cTemp.addEventListener("click", convertCDegree);
+
+let celciusTemperature = null;
+
+
+
+
+/*function convertFDegree(event) {
+  event.preventDefault();
   let degreeSwitch = document.querySelector("#temperature");
   if (degreeSwitch) {
     degreeSwitch.innerHTML = Math.round(degreeSwitch + 9 / 5 + 32);
@@ -157,4 +173,4 @@ function convertCDegree(event) {
 }
 
 let cTemp = document.querySelector("#celcius-link");
-cTemp.addEventListener("click", convertCDegree);
+cTemp.addEventListener("click", convertCDegree);*/
