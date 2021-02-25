@@ -71,16 +71,22 @@ function showTemperature(response) {
   let cityName = response.data.name;
   let currentCityName = document.querySelector(".currentLocation");
   currentCityName.innerHTML = cityName;
+  
+  celciusFeelsLikeTemperature = response.data.main.feels_like; 
 
-  let feelsLike = Math.round(response.data.main.feels_like);
+  let feelsLike = Math.round(celciusFeelsLikeTemperature);
   let currentFeelsLike = document.querySelector("#feelsLike");
   currentFeelsLike.innerHTML = feelsLike;
 
-  let tempMax = Math.round(response.data.main.temp_max);
+  celciusMaxTemp = response.data.main.temp_max;
+
+  let tempMax = Math.round(celciusMaxTemp);
   let currentTempMax = document.querySelector("#tempMax");
   currentTempMax.innerHTML = tempMax;
 
-  let tempMin = Math.round(response.data.main.temp_min);
+  celciusMinTemp = response.data.main.temp_min;
+
+  let tempMin = Math.round(celciusMinTemp);
   let currentTempMin = document.querySelector("#tempMin");
   currentTempMin.innerHTML = tempMin;
 
@@ -124,8 +130,7 @@ let geoLocationButton = document.querySelector("#geoLocation");
 geoLocationButton.addEventListener("click", getPosition);
 // GeoLocation END
 
-// celcius fahrenheit switch
-// NOT WORKING... NAN?
+// celcius fahrenheit switch unit links
 
 function convertFDegree(event) {
   event.preventDefault();
@@ -153,27 +158,73 @@ cTemp.addEventListener("click", convertCDegree);
 
 let celciusTemperature = null;
 
+// celcius fahrenheit switch on Feels Like
 
-/*function convertFDegree(event) {
+function convertFeelsLikeF(event) {
   event.preventDefault();
-  let degreeSwitch = document.querySelector("#temperature");
-  if (degreeSwitch) {
-    degreeSwitch.innerHTML = Math.round(degreeSwitch + 9 / 5 + 32);
-  }
-  console.log(degreeSwitch);
+  let temperatureElement = document.querySelector("#feelsLike");
+  let fahrenheitTemperature = ((celciusFeelsLikeTemperature * 9) / 5 + 32);
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
-let fTemp = document.querySelector("#fahrenheit-link");
-fTemp.addEventListener("click", convertFDegree);
+let feelsLikeF = document.querySelector("#fahrenheit-link");
+feelsLikeF.addEventListener("click", convertFeelsLikeF);
 
-function convertCDegree(event) {
+function convertFeelsLikeC(event) {
   event.preventDefault();
-  let degreeSwitch = document.querySelector("#temperature");
-  if (degreeSwitch) {
-    degreeSwitch.innerHTML = Math.round((degreeSwitch / 9) * 5 - 32);
-  }
-  console.log(degreeSwitch);
+  let temperatureElement = document.querySelector("#feelsLike");
+  temperatureElement.innerHTML = Math.round(celciusFeelsLikeTemperature);
 }
 
-let cTemp = document.querySelector("#celcius-link");
-cTemp.addEventListener("click", convertCDegree);*/
+let feelsLikeC = document.querySelector("#celcius-link");
+feelsLikeC.addEventListener("click", convertFeelsLikeC);
+
+let celciusFeelsLikeTemperature = null;
+
+// celcius fahrenheit switch on Max
+
+function convertMaxF(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#tempMax");
+  let fahrenheitTemperature = ((celciusMaxTemp * 9) / 5 + 32);
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+let maxF = document.querySelector("#fahrenheit-link");
+maxF.addEventListener("click", convertMaxF);
+
+function convertMaxC(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#tempMax");
+  temperatureElement.innerHTML = Math.round(celciusMaxTemp);
+}
+
+let maxC = document.querySelector("#celcius-link");
+maxC.addEventListener("click", convertMaxC);
+
+let celciusMaxTemp = null;
+
+// celcius fahrenheit switch on Min
+
+function convertMinF(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#tempMin");
+  let fahrenheitTemperature = ((celciusMinTemp * 9) / 5 + 32);
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+let minF = document.querySelector("#fahrenheit-link");
+minF.addEventListener("click", convertMinF);
+
+function convertMinC(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#tempMin");
+  temperatureElement.innerHTML = Math.round(celciusMinTemp);
+}
+
+let minC = document.querySelector("#celcius-link");
+minC.addEventListener("click", convertMinC);
+
+let celciusMinTemp = null;
+
+// END celcius fahrenheit switch on Min
