@@ -34,7 +34,7 @@ function formatDate(todaysDate) {
 
 console.log(now);
 console.log(formatDate(now));
-// end of date and time
+// end of local date and time
 
 // search engine
 function searchCity(event) {
@@ -97,6 +97,13 @@ function showTemperature(response) {
   let description = response.data.weather[0].description;
   let currentDescription = document.querySelector("#description");
   currentDescription.innerHTML = description;
+
+  /*let dateElement = document.querySelector("#lastUpdatedDate");
+  dateElement.innerHTML = formatDate(response.data.dt * 1000);
+
+  let dateElement = formatDate(response.data.dt * 1000);
+  let currentDateElement = document.querySelector("#lastUpdatedDate");
+  currentDateElement.innerHTML = dateElement; */
 }
 // API City Search END
 
