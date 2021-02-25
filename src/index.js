@@ -130,6 +130,9 @@ geoLocationButton.addEventListener("click", getPosition);
 function convertFDegree(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
+
+  cTemp.classList.remove("active");
+  fTemp.classList.add("active");
   let fahrenheitTemperature = ((celciusTemperature * 9) / 5 + 32);
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
@@ -139,6 +142,8 @@ fTemp.addEventListener("click", convertFDegree);
 
 function convertCDegree(event) {
   event.preventDefault();
+  cTemp.classList.add("active");
+  fTemp.classList.remove("active");
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(celciusTemperature);
 }
@@ -147,8 +152,6 @@ let cTemp = document.querySelector("#celcius-link");
 cTemp.addEventListener("click", convertCDegree);
 
 let celciusTemperature = null;
-
-
 
 
 /*function convertFDegree(event) {

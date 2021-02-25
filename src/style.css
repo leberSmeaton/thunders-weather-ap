@@ -63,13 +63,20 @@ input[type="search"] {
   color: #444;
 }
 
-a {
-  text-decoration: none;
+a,
+a:hover {
   color: #444;
 }
 
-a:hover {
+a.active {
+  color: #444;
+  cursor: default;
+  text-decoration: none;
+}
+
+a.active:hover {
   color: #ffc1b6;
+  text-decoration: none;
 }
 
 /* WeatherApp Container */
@@ -131,7 +138,7 @@ a:hover {
 
 .units {
   position: relative;
-  top: -12px;
+  top: -13px;
   font-size: 12px;
 }
 
