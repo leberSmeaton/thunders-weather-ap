@@ -159,7 +159,8 @@ a.active:hover {
 
 .fa-sun,
 .fa-cloud-sun,
-.fa-rainbow {
+.fa-rainbow,
+.fa-moon {
   color: #444;
   font-size: 38px;
 }
