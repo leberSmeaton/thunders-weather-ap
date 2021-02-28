@@ -124,7 +124,7 @@ a.active:hover {
 }
 
 .card-body {
-  padding: 16px 0 0 0;
+  padding: 16px 0 20px 0;
   line-height: 1;
 }
 
