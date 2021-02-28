@@ -70,6 +70,7 @@ function displayForecast(response) {
             src="https://openweathermap.org/img/wn/${
               forecast.weather[0].icon
             }@2x.png"
+            class="iconIcon"
           />
           <div class="card-body">
             <p class="card-text">
